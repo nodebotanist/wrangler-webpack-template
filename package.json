@@ -1,22 +1,24 @@
 {
-    "name": "wrangler-template",
-    "version": "1.0.0",
-    "description": "A template for kick starting a Cloudflare Workers project",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write '**/*.{js,css,json,md}'"
-    },
-    "author": "nodebotanist <the@nodebotani.st>",
-    "license": "MIT",
-    "devDependencies": {
-        "husky": "^2.1.0",
-        "prettier": "^1.17.0"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run format",
-            "pre-push": "npm run format"
-        }
+  "name": "wrangler-template",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project with a custom webpack config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --config webpack.config.js",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "author": "nodebotanist <the@nodebotani.st>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^2.1.0",
+    "prettier": "^1.17.0",
+    "webpack": "^4.35.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format",
+      "pre-push": "npm run format"
     }
+  }
 }
